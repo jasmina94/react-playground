@@ -3,62 +3,62 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends React.Component {
-    render() {
-        return (
-            <button className="square">
-                {/* TODO */}
-            </button>
-        );
-    }
-}
+// class Square extends React.Component {
+//     render() {
+//         return (
+//             <button className="square">
+//                 {/* TODO */}
+//             </button>
+//         );
+//     }
+// }
 
-class Board extends React.Component {
-    renderSquare(i) {
-        return <Square />;
-    }
+// class Board extends React.Component {
+//     renderSquare(i) {
+//         return <Square />;
+//     }
 
-    render() {
-        const status = 'Next player: X';
+//     render() {
+//         const status = 'Next player: X';
 
-        return (
-            <div>
-                <div className="status">{status}</div>
-                <div className="board-row">
-                    {this.renderSquare(0)}
-                    {this.renderSquare(1)}
-                    {this.renderSquare(2)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(3)}
-                    {this.renderSquare(4)}
-                    {this.renderSquare(5)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(6)}
-                    {this.renderSquare(7)}
-                    {this.renderSquare(8)}
-                </div>
-            </div>
-        );
-    }
-}
+//         return (
+//             <div>
+//                 <div className="status">{status}</div>
+//                 <div className="board-row">
+//                     {this.renderSquare(0)}
+//                     {this.renderSquare(1)}
+//                     {this.renderSquare(2)}
+//                 </div>
+//                 <div className="board-row">
+//                     {this.renderSquare(3)}
+//                     {this.renderSquare(4)}
+//                     {this.renderSquare(5)}
+//                 </div>
+//                 <div className="board-row">
+//                     {this.renderSquare(6)}
+//                     {this.renderSquare(7)}
+//                     {this.renderSquare(8)}
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
 
-class Game extends React.Component {
-    render() {
-        return (
-            <div className="game">
-                <div className="game-board">
-                    <Board />
-                </div>
-                <div className="game-info">
-                    <div>{/* status */}</div>
-                    <ol>{/* TODO */}</ol>
-                </div>
-            </div>
-        );
-    }
-}
+// class Game extends React.Component {
+//     render() {
+//         return (
+//             <div className="game">
+//                 <div className="game-board">
+//                     <Board />
+//                 </div>
+//                 <div className="game-info">
+//                     <div>{/* status */}</div>
+//                     <ol>{/* TODO */}</ol>
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
 
 // ========================================
 
@@ -609,66 +609,66 @@ class Game extends React.Component {
 
 
 //** Composition vs Inheritance */
-const FancyBorder = (props) => {
-    return (
-        <div className={'FancyBorder FancyBorder-' + props.color}>
-            {props.children}
-        </div>
-    );
-};
+// const FancyBorder = (props) => {
+//     return (
+//         <div className={'FancyBorder FancyBorder-' + props.color}>
+//             {props.children}
+//         </div>
+//     );
+// };
 
-const WelcomeDialog = () => {
-    return (
-        <FancyBorder color="blue">
-            <h1 className="DialogTitle">Welcome</h1>
-            <p className="DialogMessage">Thank you!</p>
-        </FancyBorder>
-    );
-};
+// const WelcomeDialog = () => {
+//     return (
+//         <FancyBorder color="blue">
+//             <h1 className="DialogTitle">Welcome</h1>
+//             <p className="DialogMessage">Thank you!</p>
+//         </FancyBorder>
+//     );
+// };
 
-const Dialog = (props) => {
-    return (
-        <FancyBorder color="blue">
-            <h1 className="Dialog-title">
-                {props.title}
-            </h1>
-            <p className="Dialog-message">
-                {props.message}
-            </p>
-            {props.children}
-        </FancyBorder>
-    )
-};
+// const Dialog = (props) => {
+//     return (
+//         <FancyBorder color="blue">
+//             <h1 className="Dialog-title">
+//                 {props.title}
+//             </h1>
+//             <p className="Dialog-message">
+//                 {props.message}
+//             </p>
+//             {props.children}
+//         </FancyBorder>
+//     )
+// };
 
-class SignUpDialog extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSignUp = this.handleSignUp.bind(this);
-        this.state = { login: ''};
-    }
+// class SignUpDialog extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.handleChange = this.handleChange.bind(this);
+//         this.handleSignUp = this.handleSignUp.bind(this);
+//         this.state = { login: ''};
+//     }
 
-    handleChange(e) {
-        this.setState({login: e.target.value})
-    }
+//     handleChange(e) {
+//         this.setState({login: e.target.value})
+//     }
 
-    handleSignUp(e) {
-        alert(`Welcome aboard, ${this.state.login}!`);
-    }
+//     handleSignUp(e) {
+//         alert(`Welcome aboard, ${this.state.login}!`);
+//     }
 
-    render() {
-        return (
-            <Dialog title="Sign up please" 
-            message="This is a message from sign up dialog">
-                <input type="text" value={this.state.login} onChange={this.handleChange}/>
-                <button onClick={this.handleSignUp}>Sign me up!</button>
-            </Dialog>
-        )
-    }
-};
+//     render() {
+//         return (
+//             <Dialog title="Sign up please" 
+//             message="This is a message from sign up dialog">
+//                 <input type="text" value={this.state.login} onChange={this.handleChange}/>
+//                 <button onClick={this.handleSignUp}>Sign me up!</button>
+//             </Dialog>
+//         )
+//     }
+// };
 
-ReactDOM.render(
-<div>
-    <WelcomeDialog />
-    <SignUpDialog/>
-</div>, document.getElementById('root'));
+// ReactDOM.render(
+// <div>
+//     <WelcomeDialog />
+//     <SignUpDialog/>
+// </div>, document.getElementById('root'));
