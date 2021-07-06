@@ -22,7 +22,7 @@ export class SearchBar extends React.Component {
         return (
             <div>
                 <div>
-                    <input type="text" value={searchTerm} onChange={this.handleSearchTerm}/>
+                    <input type="text" value={searchTerm} placeholder="Search..." onChange={this.handleSearchTerm}/>
                 </div>
                 <p>
                     <input type="checkbox" checked={inStockFlag} onChange={this.handleInStockOnly}/>
