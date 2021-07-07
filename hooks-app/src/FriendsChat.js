@@ -43,8 +43,9 @@ export function FormToLogin() {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        if (nameIsValid(loggedInFriend)) {
-            setLoggedInFriend(e.target.value);
+        const passedName = document.getElementById('name').value;
+        if (nameIsValid(passedName)) {
+            setLoggedInFriend(passedName);
         }
     }
 
@@ -55,7 +56,7 @@ export function FormToLogin() {
     return (
         <div>
             <form onSubmit={handleLogin}>
-                <input type='text' placeholder='Name...' onChange={handleNameChange}/>
+                <input type='text' id='name' placeholder='Name...' onChange={handleNameChange}/>
                 <button type='submit'>Login</button>
             </form>
         </div>
