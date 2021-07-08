@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Counter} from './CallbackExample';
+import Counter from './CallbackExample';
 
 //ReactDOM.render(<Example />, document.getElementById('root'));
 //ReactDOM.render(<Form />, document.getElementById('root'));

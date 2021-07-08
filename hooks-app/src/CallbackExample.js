@@ -1,8 +1,9 @@
+import * as React from 'react';
 import { useCallback, useState } from "react";
 
 const functionCounter = new Set();
 
-export function Counter() {
+const Counter = () => {
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
 
@@ -19,14 +20,16 @@ export function Counter() {
     console.log(functionCounter.size);
 
     return (
-        <>
-           Count one: {count1}
-           <button onClick={increment1}>+</button>
-           <button onClick={decrement1}>-</button>
-           <br/>
-           Count two: {count2}
-           <button onClick={increment2}>Increment count 2</button>
-           <button onClick={decrement2}>Decrement count 2</button>
-        </>
+        <div>
+            Count one: {count1}
+            <button onClick={increment1}>+</button>
+            <button onClick={decrement1}>-</button>
+            <br />
+            Count two: {count2}
+            <button onClick={increment2}>Increment count 2</button>
+            <button onClick={decrement2}>Decrement count 2</button>
+        </div>
     )
 }
+
+export default Counter;
