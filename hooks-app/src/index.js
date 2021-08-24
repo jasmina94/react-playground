@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './CallbackExample';
+import App from './FocusOnMountExample';
 
 //ReactDOM.render(<Example />, document.getElementById('root'));
 //ReactDOM.render(<Form />, document.getElementById('root'));
@@ -17,4 +17,13 @@ import Counter from './CallbackExample';
 //         <LazyCounter initialCount={100}/>
 //     </div>, document.getElementById('root'));
 
-ReactDOM.render(<Counter/>, document.getElementById('root'));
+// ReactDOM.render(<Counter/>, document.getElementById('root'));
+// ReactDOM.render(<Parent/>, document.getElementById('root'));
+
+// ReactDOM.render(<UltimateLifecycleDemoApp/>, document.getElementById('root'));
+
+// ReactDOM.render(<Top/>, document.getElementById('root'));
+
+// ReactDOM.render(<Demo/>, document.getElementById('root'));
+
+// ReactDOM.render(<App/>, document.getElementById('root'));
